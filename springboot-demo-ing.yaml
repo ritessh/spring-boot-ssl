@@ -1,0 +1,59 @@
+#apiVersion: networking.k8s.io/v1beta1
+#kind: Ingress
+#metadata:
+#  annotations:
+#    #kubernetes.io/ingress.class: haproxy
+#    ingress.kubernetes.io/balance-algorithm: roundrobin
+#    ingress.kubernetes.io/blue-green-deploy: group=blue=1,group=green=1
+#    ingress.kubernetes.io/blue-green-mode: "pod"
+#    ingress.kubernetes.io/ssl-redirect: "true"
+#    ingress.kubernetes.io/auth-tls-verify-client: off
+#     ingress.kubernetes.io/auth-tls-secret: springboot-demo-secure/tls-secret
+#     ingress.kubernetes.io/auth-tls-verify-depth: 1
+#  name: springboot-demo-secure-ing
+#  namespace: springboot-demo-secure
+#spec:
+#  tls:
+#    - secretName: springboot-demo-secure/tls-secret
+#  rules:
+#  - host: 
+#    http:
+#      paths:
+#      - backend:
+#          serviceName: springboot-demo-secure-svc
+#        servicePort: 8444
+#        path: /demo-secure
+
+---
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    ingress.kubernetes.io/balance-algorithm: roundrobin
+    ingress.kubernetes.io/blue-green-deploy: group=blue=1,group=green=1
+    ingress.kubernetes.io/blue-green-mode: pod
+    ingress.kubernetes.io/ssl-redirect: "true"
+    ingress.kubernetes.io/backend-protocol: "h1-ssl"
+    ingress.kubernetes.io/use-htx: "true"
+    ingress.kubernetes.io/auth-tls-secret: springboot-demo-secure/tls-secret
+    ingress.kubernetes.io/secure-crt-secret: springboot-demo-secure/tls-secret
+    ingress.kubernetes.io/secure-backends: "true"
+  name: springboot-demo-secure-ing
+  namespace: springboot-demo-secure
+spec:
+  tls:
+    - secretName: springboot-demo-secure/tls-secret
+  rules:
+#  - host: kube-master
+  - http:
+      paths:
+      - backend:
+          serviceName: springboot-demo-secure-svc
+          servicePort: 8444
+        path: /demo-secure
+#      - backend:
+#          serviceName: springboot-demo-http-svc
+#          servicePort: 8080
+#        path: /demo
+
+

@@ -1,0 +1,27 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    ingress.kubernetes.io/balance-algorithm: roundrobin
+    ingress.kubernetes.io/blue-green-deploy: group=blue=1,group=green=1
+    ingress.kubernetes.io/blue-green-mode: pod
+    ingress.kubernetes.io/ssl-redirect: "false"
+  name: springboot-demo-ing
+  namespace: springboot-demo
+spec:
+  tls:
+    - secretName: springboot-demo/tls-secret 
+  rules:
+  - http:
+      paths:
+      - backend:
+          serviceName: springboot-demo-svc
+          servicePort: 443
+        path: /actuator/health
+      paths:
+      - backend:
+          serviceName: springboot-demo-svc
+          servicePort: 443
+        path: /blue-green-demo
+
+        

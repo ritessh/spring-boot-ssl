@@ -1,0 +1,121 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  creationTimestamp: null
+  name: springboot-demo
+spec: {}
+status: {}
+---
+apiVersion: v1
+data:
+  tls.crt: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUNwRENDQVl3Q0NRRHp5cm1CekJ5ZDZEQU5CZ2txaGtpRzl3MEJBUXNGQURBVU1SSXdFQVlEVlFRRERBbHMKYjJOaGJHaHZjM1F3SGhjTk1qQXhNVEl6TURVeE1qVXhXaGNOTWpFeE1USXpNRFV4TWpVeFdqQVVNUkl3RUFZRApWUVFEREFsc2IyTmhiR2h2YzNRd2dnRWlNQTBHQ1NxR1NJYjNEUUVCQVFVQUE0SUJEd0F3Z2dFS0FvSUJBUURHCi9zRUhEZVpHT1ROL3JKdlh0UEpTdW5FWEk5MkMwZWI5ZHA2K0k1M2w1ZmRQUkl4SklPcUxPSDZrajkzbk0ySTIKdzJVeVJrdVJ6M0xKVitTQmhicHg3c2YzOTViVGk0Ti9KVXBobWdIUlBRY3RsMFNERU1WZjBiR1BOcmd2UlBaeQpaKzJsbGlqUXJSMTV4dTNQVGIyOS9vMUVnV2YxbFRyTkVpN1IrVkVrcG05czlMNUZZMVZtbGFLenk3WGdhYmt4Cjl4MXNQQityRkp4WnVMOWVBQVZTS3hmUSt4MmZxanZtbUo2dlMyYkFBM0FHcFUzK2NBU3J3Lzd6QUczNFBIblMKbCtVUjd6SFFkNWRxb0x6TGZEaFhwaCtEQUQ1R2hwNmdaaHJKUW80TVpIazIwL25mQVB1TGxZOUZkZkJhZlliSApzYW5NNnlqb1crNTJ2ak9mSC9GNUFnTUJBQUV3RFFZSktvWklodmNOQVFFTEJRQURnZ0VCQUNLcVFjWjlxdTNtCk1IT0dDdkF0MFYwekNKb0E4VXdOb1lKS3dqN1VNRXJQSmVEcTFRTGs2a28zS3daaGQwV29jT2JLNTJQMXNpcDIKV0h0WUxEQjdtaDhoU2NzNzZ0RGxnRjZMUGlrR2xPVnB3aEd6M0JtK2ZVUXd0QUIrVm9xNzJsTEhMQlBzbWNZdAp5Vk9zdThXSTE2TEdlSU1QQzd0a0dWTVZKb00wbkdod3diVGhQQkREYTBmOGFuRFd3eXE4UFIzYzJLanRIMVMrClZMRlZJUyticTFhVE4yNitmWFhQNjJJK2ZuZ1QzZWEvSTg4QWJaMlFESzg2bDYxbTdnUXZKOW1aYmw3a1hSZFUKMzArQUgvNEtaaGVrVHI5Nm50Y1hWOFNEVWJtdSt6ckFJRWxDUEdYM2QycExxWVA5NjcxL1FBbkxTSGlSSDRtbgpEZTBJMDF4aHdFUT0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=
+  tls.key: LS0tLS1CRUdJTiBQUklWQVRFIEtFWS0tLS0tCk1JSUV2Z0lCQURBTkJna3Foa2lHOXcwQkFRRUZBQVNDQktnd2dnU2tBZ0VBQW9JQkFRREcvc0VIRGVaR09UTi8Kckp2WHRQSlN1bkVYSTkyQzBlYjlkcDYrSTUzbDVmZFBSSXhKSU9xTE9INmtqOTNuTTJJMncyVXlSa3VSejNMSgpWK1NCaGJweDdzZjM5NWJUaTROL0pVcGhtZ0hSUFFjdGwwU0RFTVZmMGJHUE5yZ3ZSUFp5WisybGxpalFyUjE1Cnh1M1BUYjI5L28xRWdXZjFsVHJORWk3UitWRWtwbTlzOUw1RlkxVm1sYUt6eTdYZ2Fia3g5eDFzUEIrckZKeFoKdUw5ZUFBVlNLeGZRK3gyZnFqdm1tSjZ2UzJiQUEzQUdwVTMrY0FTcncvN3pBRzM0UEhuU2wrVVI3ekhRZDVkcQpvTHpMZkRoWHBoK0RBRDVHaHA2Z1pockpRbzRNWkhrMjAvbmZBUHVMbFk5RmRmQmFmWWJIc2FuTTZ5am9XKzUyCnZqT2ZIL0Y1QWdNQkFBRUNnZ0VCQUtrd3BwdkIxSnkyTzdQODVRL1V1QWRnbjVDbUhNc0NmbHZZaEFWenNPZHIKekFhb2FJSXdxMW90Y1hlbkhtdFp3OUo5OVVkMmZ2LzlHa0pZS1Y5NmZOZ3J4ZmR0bWQ1SkMwZUtSQ0NSMmFPMgpPS2twcU1XcTk3V05TMk5SaWU0ZXUwN3dVQnp1ZTh0WXRPdjZGKzJlMG9sOHFVMnFuT0l2dkN2cG5zZEdMQmgwCnJkakZaeDJqaG1zdlE0MHpDeitWZ25LZFdqM0J0eFJqYnNhdm0vNWJzaUN6KzJoWkZWMnk2NjlZazYySFlKNFkKdW1wNHVuaG0yQ3lmaFdQSCtsMG1mbXlYUWMxV2x1TlpieDRVMGRnbnhqSkRKV3pDMzF3MHFkZEw2RGliNS8zcgpVOUQ4djArVzZpYThnTU9PYWhDM0h3SUVBWGlvWVoxNXIwWTRsQTJJSnhVQ2dZRUE2V3RBbG1MZmhUNndXampyClBSNTF3TFkrZmlIZit3MEltLzhDWmN6Y1VLT213UnVub213MmhKcTV6S21yd0xyakRBZktQQ25QWUxrTG1JdnEKZ3ZCTEFBR2VDMS9hSnQySEttUm0ySEtpSzBkNTVWVFNUSk1Ici8wZ2Z1OXEySDErVG5ZZHVMUUE5L2dhei9OSAp5WFE4ZkMzaG50YjFQYmdNRFAvUFZxWlNqLzhDZ1lFQTJqNzZIUzg1S09hcGtVQjV5V0ZrQjg4eVBtSEx0bE5nCnJ0K2lJdWRtTTZPbW9DYk1oUmJGNFFlcGRSQ01kUmFldnV1M0UvbTcvemQ1eGxsWi9LR2JBT2hCd1JYeWRLangKREc1V21QMitYQVZkaDhQYlBKYVRFYURYdVY4bGExb0ExRHhZMTIyZDI0aWJON3FIdTlRSU9yWS9NTi9vbUF2RwowYy9xbnhGSi9vY0NnWUFReVRhKzJlTnJLS1AwQ1EzWnVsd0xmTStuc0hYMER1N2trUVV5SHZabEVpL0d5VjlYCnplSnB6TnE1dmlYczJVUEV0TGExZHVoRDgyckRFS1RQdjhvVStRak5scG9RbTNQQjk3Qnh0bVMxS2hHNURVMkcKVmppQ1Ruak15Qmp0OHJCbm9oVG5HSUxOVWxsVFJSS1BpVDFrVE1SaDhPRjRDOGxLRWdkdUdzM3JMd0tCZ1FDYwovUXdoRGlVSnZOSmd2NFpiUzRrTzdRWHhSWnVwclZRd3RvRUVwbnNuemlJL3RXa01teE1BQ2VqbFltQUdvWnpUCkxPOW1tUStZU0NsNmVpOTJ3RENsZUd4RUhpdG5xMWFwWUgwK1U5Z29qVnQ0RzNTS29xMXIwczBhZE15UDZoQUsKbXRZMU1JNktxanNzM1NwaCsrVm5oa3p5TlQ0MGtOUVZmSUFDcUFjWDVRS0JnRDF4cVhDK0xlNkc2eVdoQzBQRApoanBSYlZ0K0UrQ2FFR0Z1Q0g0SWlPUGZYTWkvSHJ5NGZLbjl2amp4VVZnWjFGQzFSaTJxTEtWSE1oRzB2S01RClBManVEelN0UHB4SFRVQm5oTnljVTY3b0Q0eDR4ajZxSGpteDVNcUIvcGoxc0kwUGxaRmZ3RkRKRTVoQ1JxWEUKMmI2SlN0OSttOXhrOERqZkt2T1pJeW1VCi0tLS0tRU5EIFBSSVZBVEUgS0VZLS0tLS0K
+kind: Secret
+metadata:
+  creationTimestamp: null
+  name: tls-secret
+  namespace: springboot-demo
+type: kubernetes.io/tls
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: springboot-demo
+  name: springboot-demo-blue
+  namespace: springboot-demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: springboot-demo
+      group: blue
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: springboot-demo
+        group: blue
+    spec:
+      containers:
+      - image: docker-registry:5000/springboot-blue-green-demo:blue
+        name: springboot-demo
+        resources: {}
+status: {}
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: springboot-demo
+  name: springboot-demo-green
+  namespace: springboot-demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: springboot-demo
+      group: green
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: springboot-demo
+        group: green
+    spec:
+      containers:
+      - image: docker-registry:5000/springboot-blue-green-demo:green
+        name: springboot-demo
+        resources: {}
+status: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: springboot-demo
+  name: springboot-demo-svc
+  namespace: springboot-demo
+spec:
+  ports:
+  - name: https
+    port: 443
+    protocol: TCP
+    targetPort: 8443
+  selector:
+    app: springboot-demo
+  type: ClusterIP
+status:
+  loadBalancer: {}
+---
+#apiVersion: networking.k8s.io/v1beta1
+#kind: Ingress
+#metadata:
+#  annotations:
+#    ingress.kubernetes.io/balance-algorithm: roundrobin
+#    ingress.kubernetes.io/blue-green-deploy: group=blue=1,group=green=1
+#    ingress.kubernetes.io/blue-green-mode: pod
+#    ingress.kubernetes.io/ssl-redirect: "false"
+#  name: springboot-demo-ing
+#  namespace: springboot-demo
+#spec:
+#  tls:
+#    - secretName: springboot-demo/tls-secret 
+#  rules:
+#  - http:
+#      paths:
+#      - backend:
+#          serviceName: springboot-demo-svc
+#          servicePort: 443
+#        path: /actuator/health
+#      paths:
+#      - backend:
+#          serviceName: springboot-demo-svc
+#          servicePort: 443
+#        path: /blue-green-demo
+
