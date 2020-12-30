@@ -10,15 +10,15 @@ pipeline {
                 sh "mvn clean package"
             }
         }
-        stage('Test') { 
-            steps {
-                // 
-            }
-        }
-        stage('Deploy') { 
-            steps {
-                // 
-            }
-        }
+ //       stage('Test') { 
+ //           steps {
+ //               // 
+ //           }
+ //       }
+ //       stage('Deploy') { 
+ //           steps {
+ //               // 
+ //           }
+ //       }
     }
 }
