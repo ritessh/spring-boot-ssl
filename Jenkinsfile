@@ -21,6 +21,7 @@ pipeline {
 		sh "/usr/bin/sed -i 's/GIT_COMMIT_ID/$GIT_COMMIT/g' springboot-demo-spinnaker.yaml > springboot-demo-spinnaker-${GIT_COMMIT}.yaml"
             }
         }
+    }
 	
     post {
 	always {
