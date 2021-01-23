@@ -25,7 +25,7 @@ pipeline {
 	
     post {
 	    always {
-		    archiveArtifacts artifacts: './springboot-demo-spinnaker-${GIT_COMMIT}.yaml', fingerprint: true
+		    archiveArtifacts artifacts: 'springboot-demo-spinnaker-*.yaml', fingerprint: true
 	    }
     }
 }
