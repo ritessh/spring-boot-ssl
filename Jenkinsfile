@@ -22,11 +22,11 @@ pipeline {
             }
         }
 	
-	post {
-		always {
-			archiveArtifacts artifacts: './springboot-demo-spinnaker-${GIT_COMMIT}.yaml', fingerprint: true
-		}
+    post {
+	always {
+		archiveArtifacts artifacts: './springboot-demo-spinnaker-${GIT_COMMIT}.yaml', fingerprint: true
 	}
+    }
  //       stage('Deploy') { 
  //           steps {
  //               // 
