@@ -16,8 +16,8 @@ pipeline {
 		}
             steps {
 		sh "/usr/local/bin/docker build -t springboot-demo-secure-prometheus:${GIT_COMMIT} ./"
-		sh "/usr/local/bin/docker tag springboot-demo-secure-prometheus:${GIT_COMMIT} docker-registry:5000/springboot-demo-secure-prometheus:latest"
-		sh "/usr/local/bin/docker push docker-registry:5000/springboot-demo-secure-prometheus:latest"
+		sh "/usr/local/bin/docker tag springboot-demo-secure-prometheus:${GIT_COMMIT} 192.168.225.14:5000/springboot-demo-secure-prometheus:latest"
+		sh "/usr/local/bin/docker push 192.168.225.14:5000/springboot-demo-secure-prometheus:${GIT_COMMIT}"
             }
         }
  //       stage('Deploy') { 
