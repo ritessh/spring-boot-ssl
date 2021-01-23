@@ -18,7 +18,7 @@ pipeline {
 		sh "/usr/local/bin/docker build -t springboot-demo-secure-prometheus:${GIT_COMMIT} ./"
 		sh "/usr/local/bin/docker tag springboot-demo-secure-prometheus:${GIT_COMMIT} docker-registry:5000/springboot-demo-secure-prometheus:${GIT_COMMIT}"
 		sh "/usr/local/bin/docker push docker-registry:5000/springboot-demo-secure-prometheus:${GIT_COMMIT}"
-		sh "/usr/bin/sed -i "s/GIT_COMMIT_ID/${GIT_COMMIT}/g" springboot-demo-spinnaker.yaml > springboot-demo-spinnaker-${GIT_COMMIT}.yaml
+		sh "/usr/bin/sed -i 's/GIT_COMMIT_ID/$GIT_COMMIT/g' springboot-demo-spinnaker.yaml > springboot-demo-spinnaker-${GIT_COMMIT}.yaml"
             }
         }
 	
